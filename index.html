@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Mario Jump</title>
+  <meta name ="description"  content="Super Mario Jump est un jeu qui consiste à appuyer sur les bonnes flèches directionnels indiqués en moins de temps possible !">
+  <link rel="stylesheet" href="styles.css?v1">
+  <link rel="icon" href="images/hud/ico.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=0.33, minimum-scale=0.33, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+</head>
+
+<body>
+
+
+
+  <div id="skybox">
+    </id>
+    <div id="background">
+      </id>
+      <div id="mobileBackgroundHit">
+        <div id="leftHit"></div>
+        <div id="upHit"></div>
+        <div id="downHit"></div>
+        <div id="rightHit"></div>
+      </div>
+
+      <h1 id="title">Super Mario Jump</h1>
+      <div id="label">
+        <h3 id="credits">Inspiré du jeu Dominot Barjot - Mario Party DS</h3>
+        <h3 id="author">Rida MOUHSSINE</h3>
+        <a href="https://github.com/RidaMouhssine/Super-Mario-Jump.git" target="_blank"><img src="images/hud/github.png" id="github" alt="Logo Github"></a>
+      </id>
+
+      <div id="buttons">
+
+        <button id="play">Jouer <img src="images/hud/enter.png" width="35" alt="Entrée"></button>
+        <button id="options">Options <img src="images/hud/escape.png" width="35" alt="Échap"></button>
+
+      </div>
+
+      <div id="character">
+        <div id="sprite"></div>
+      </div>
+
+      <div id="optionsMenu">
+
+        <div id="navBar">
+          <h2>Options</h2>
+          <div id="close" title="Fermer le menu"></div>
+        </div>
+
+        <div id="menuRows">
+          <img id="marioIcon" src="images/hud/marioClicked.png" width="100" alt="Mario" title="Mario">
+          <img id="luigiIcon" src="images/hud/luigiUnlocked.png" width="100" alt="Luigi" title="Luigi">
+          <img id="warioIcon" src="images/hud/warioUnlocked.png" width="100" alt="Wario" title="Wario">
+          <img id="waluigiIcon" src="images/hud/waluigiUnlocked.png" width="100" alt="Waluigi" title="Waluigi">
+        </div>
+
+        <div id="menuRows">
+          <img id="bg1Icon" src="images/hud/backgroundClicked1.png" width="100" alt="Niveau de Prairie"
+            title="Niveau de Prairie">
+          <img id="bg2Icon" src="images/hud/backgroundUnlocked2.png" width="100" alt="Niveau de Neige"
+            title="Niveau de Neige">
+          <img id="bg3Icon" src="images/hud/backgroundUnlocked3.png" width="100" alt="Niveau de Jungle"
+            title="Niveau de Jungle">
+          <img id="bg4Icon" src="images/hud/backgroundUnlocked4.png" width="100" alt="Niveau de Lave"
+            title="Niveau de Lave">
+        </div>
+
+        <div id="menuSecondRows">
+          <img id="musicIcon" title="Activer/Désactiver la musique" src="images/hud/musiqueOn.png" width="100"
+            alt="Activer/Désactiver la musique">
+          <img id="soundIcon" title="Activer/Désactiver les sons" src="images/hud/soundOn.png" width="100"
+            alt="Activer/Désactiver les sons">
+          <img id="hardModeIcon" src="images/hud/hardMode.png" title="Hardmode" width="100" alt="">
+        </div>
+
+      </div>
+
+      <div id="hud">
+        <p id=chronometre><span id="seconds">00</span> : <span id="milliseconds">00</span></p>
+
+        <br>
+
+        <div id="arrows"></div>
+      </div>
+
+      <div id="buttons2">
+        <button id="replay">Rejouer <img src="images/hud/enter.png" width="35" alt="Entrée"></button>
+        <button id="menu">Retour au menu <img src="images/hud/escape.png" width="35" alt="Échap"></button>
+      </div>
+
+      <div id="ground">
+        </id>
+
+        <script src="game.js?v1"></script>
+
+</body>
+
+</html>

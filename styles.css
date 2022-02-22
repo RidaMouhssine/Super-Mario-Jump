@@ -1,0 +1,443 @@
+
+* {
+padding: 0px;
+margin: 0px;
+overflow: hidden;
+}
+
+#skybox {
+background: url("images/maps/skybox1.png");
+background-size: cover;
+background-position: 0;
+background-position: fixed;	
+width: 100%;
+height: 100vh;
+transition: background-position 0.5s;
+}
+
+
+#background {
+background: url("images/maps/background1.png");
+background-size: cover;
+background-position: 0;
+background-position: fixed;	
+width: 100%;
+height: 100vh;
+transition: background-position 0.5s;	
+}
+
+#ground {
+background: url("images/maps/ground1.png");
+transition: background-position 0.5s;	
+width: 10000px;
+height: 100px;
+position: absolute;
+bottom: 0px;
+right: 50%;
+transform: translateX(50%);
+    }
+#github {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+#mobileBackgroundHit { 
+display: none;
+}
+
+#leftHit {
+position: absolute;
+width: 33.3%;
+height: 100vh;
+z-index: 50;
+}
+
+#upHit {
+position: absolute;
+width: 33.3%;
+left: 33.3%;
+height: 50vh;
+z-index: 50;
+}
+#downHit {
+width: 33.3%;
+left: 33.3%;
+top: 50%;
+position: absolute;
+display: block;
+height: 50vh;
+z-index: 50;
+    }
+
+#rightHit {
+width: 33.4%;
+position: absolute;
+height: 100vh;
+right: 0px;
+z-index: 50;
+}
+
+#buttons {
+display: flex;
+flex-direction: column;
+position: absolute;
+right: 50%;
+transform:translateX(50%);
+top: 35%;
+width: 500px;
+z-index: 1;
+white-space: nowrap;
+}
+
+#buttons2 {
+display: flex;
+flex-direction: column;
+position: absolute;
+right: 50%;
+transform:translateX(50%);
+top: 35%;
+width: 500px;
+z-index: 1;
+white-space: nowrap;
+}
+
+#replay, #menu {
+display: none;
+}
+
+#play, #options, #replay, #menu {
+font-size: 3em;
+margin: 0px 0px 25px;
+font-family: 'Oswald', sans-serif;
+min-width: 100%;
+height: 100px;
+}
+
+#optionsMenu {
+width: 750px;
+height: 500px;
+background-color: #fff;
+position: absolute;
+left: 50%;
+top: 50%;
+transform:translate(-50%, -50%);
+box-shadow: 0px 0px 5px;
+border: 1px solid black;
+z-index: 3;
+display: none;
+}
+
+#navBar {
+width: 100%;
+height: 61.25px;
+background: linear-gradient(rgba(75,200,75), rgba(50,175,50));
+border-bottom: 1px solid black;
+z-index: 4;
+}
+
+#menuRows {
+margin-top: -1px;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding: 20px;
+border-top: 1px solid black;
+}
+
+#menuSecondRows {
+margin-top: -1px;
+margin: 0 auto;
+width: 750px;
+display: grid;
+grid-template-columns: 1fr 4fr 4fr;
+padding:  20px;
+border-top: 1px solid black;
+}
+
+#musicIcon {
+margin-right: 40px;
+margin-left: 100px;
+cursor: pointer;
+}
+
+#soundIcon {
+cursor: pointer;
+margin-right: 165px;
+}
+
+#marioIcon, #luigiIcon, #warioIcon, #waluigiIcon,
+#bg1Icon, #bg2Icon, #bg3Icon, #bg4Icon, #hardModeIcon {
+cursor: pointer;
+}
+
+#close {
+width: 61.25px;
+height: 61.25px;
+float: right;
+background: url("images/hud/close.png");
+background-size: 100%;
+z-index: 5;
+cursor: pointer;
+}
+
+#hud {
+background-color: rgb(0,0,0, 0.25);
+margin-top: 200px;
+padding:  25px;
+box-shadow: black 0px 0px 5px;
+display: none;
+z-index: 3;
+}
+
+#arrows, p {
+white-space: nowrap;
+text-align: center;
+font-size: 3em;
+font-family: 'Lucida Sans', sans-serif; 
+color: white;
+text-shadow: black 0px 0px 5px;
+}
+
+#arrows :nth-child(1n+4)
+
+{
+
+    display: none;
+}
+
+h1 {
+white-space: nowrap;
+text-align: center;
+font-size: 5em;
+margin-top: 200px;
+font-family: 'Oswald', sans-serif; 
+color: white;
+text-shadow: black 0px 0px 5px;
+}
+
+h2 {
+white-space: nowrap;
+text-align: center;
+font-size: 2em;
+position: absolute;
+right: 50%;
+transform: translateX(50%);
+top: 10px;
+font-family: 'Oswald', sans-serif; 
+color: white;
+text-shadow: black 0px 0px 5px;
+}
+
+#credits {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-family: 'Oswald', sans-serif; 
+    color: white;
+    text-shadow: black 0px 0px 5px;
+    z-index: 100;
+    font-size: 1em;
+
+}
+
+#author {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-family: 'Oswald', sans-serif; 
+    color: white;
+    text-shadow: black 0px 0px 5px;
+    z-index: 100;
+    font-size: 1em;
+  
+    text-align: right;
+}
+
+#character {
+position: absolute;
+bottom: 100px;
+left: 50%;
+transform: translateX(-50%);
+transition: 0.5s;
+}
+
+#sprite {
+width: 240px;
+height: 240px;
+background: url('images/characters/mario.png');
+}
+
+
+
+@keyframes jump {
+    from{bottom: 100px;}
+    50%{bottom: 150px;}
+    to{bottom: 100px;}
+    }
+    
+    
+@keyframes miss {
+    from{left: 52.5%;}
+    25%{left: 47.5%;}
+    75%{left: 52.5%;}
+    to{left: 50%;}
+    }
+
+
+
+/* 
+En dessous de 1280 de largeur */
+
+@media screen and (max-width: 1280px)
+
+{
+ #character {
+    transition: 0s;
+    transform: translateX(-65%);
+    }
+
+    #ground {
+    width: 1280px;
+    }
+
+}
+
+/* 
+Au dessus de 300 de hauteur */
+
+@media screen and (min-width: 300px)
+{
+    #hud {
+        margin-top: 1500px;
+        font-size: 0.75em;
+    }
+
+    #optionsMenu {
+        top: 70%;
+    }
+}
+
+/* 
+En dessous de 1024 de largeur */
+
+@media screen and (max-width: 1024px)
+
+{
+    #character {
+        transition: 0s;
+        transform: translateX(-50%);
+        }
+
+    #ground {
+      transform: translateX(45%);
+      width: 1080px;
+      }
+}
+
+/* 
+Au dessus de 1024 de largeur */
+
+@media screen and (min-width: 1280px)
+
+{
+    #hud {
+        font-size: 0.75em;
+        margin-top: 100px;
+    }
+
+    #buttons, #buttons2 {
+        margin-top: 2000px;
+    }
+
+
+    #title {
+        margin-top: 100px;
+    }
+
+    #optionsMenu {
+        top: 50%;
+    }
+}
+
+@media screen and (min-width: 800px)
+{
+    #hud {
+        font-size: 0.75em;
+        margin-top: 200px;
+    }
+
+    #buttons, #buttons2 {
+    margin-top: 0px;
+    }
+
+
+    #title {
+        margin-top: 100px;
+    }
+
+    #optionsMenu {
+        top: 50%;
+    }
+}
+
+/* 
+En dessous de 800 de hauteur (Tablette)*/
+
+@media screen and (max-height: 800px)
+ {
+    h1 {
+    margin-top: 125px;
+    }
+
+#hud {
+    margin-top: 125px;
+    }
+
+    #play, #options, #replay, #menu {
+        font-size: 1.5em;
+        height: 70px;
+        margin-right: 50px;
+    }
+
+    #buttons, #buttons2 {
+        flex-direction: row;
+        transform: translateX(0);
+        overflow: visible;
+        width: 300px;
+    }
+}
+    
+/* 
+En dessous de 600 de hauteur (Tablette)*/
+
+@media screen and (max-height: 600px)
+{
+      h1{
+     margin-top: 75px;
+     }
+
+    #hud{
+     margin-top: 75px;  
+     }
+
+    #arrows {
+    font-size: 2em;
+    }
+
+
+    #buttons, #buttons2 {
+        flex-direction: row;
+        transform: translateX(0);
+        width: 300px;
+        overflow: visible;
+        }
+
+#play, #options, #replay, #menu {
+    font-size: 1.5em;
+    height: 50px;
+    margin-right: 50px;
+    }
+}
